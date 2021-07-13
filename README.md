@@ -58,9 +58,9 @@ Animate your **spaceship** across the screen while it's alive.
 5. Add to README file - DONE
 7. Index.html: Add boilerplate, links to css and js file, and link to jQuery - DONE
 8. Add semantic HTML: a header, main, aside, and footer - DONE
-9. Put content in header: title, backstory paragraph, input for spaceship name, button to start game
-10. Put content in main: img for background, imgs for 3 spaceships
-11. Put content in aside: bars/counts for fuel/oxygen/radiation, buttons to increase/decrease each of those stats
+9. Put content in header: title, backstory paragraph, input for spaceship name, button to start game - DONE
+10. Put content in main: img for background, imgs for 3 spaceships - DONE
+11. Put content in aside: bars/counts for fuel/oxygen/radiation, buttons to increase/decrease each of those stats - DONE
 12. Put content in footer: author name, any attributions for content used, link to github? 
 13. Assign classes/ids, add any necessary spans/divs, other appropriate content
 14. Add CSS defaults/basics to main.css - change spacing and any icons/interactive things that will influence how the JS will function
