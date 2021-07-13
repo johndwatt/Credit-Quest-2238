@@ -7,7 +7,8 @@ A tomagotchi-type game for Project 0 at General Assembly
 -An traveling adventurer that needs to snack - title is "the adventurers journey" or something
     warmth, hunger, sleep
     morphs at certain levels to become stronger? level up?
-//A space smuggler making deliveries or soemthing - he upgrades his spaceship after a certain number of levels. You ahve to keep the spaceship running and working until you make enough money to retire. 
+***A space smuggler making deliveries or soemthing - he upgrades his spaceship after a certain number of levels. You ahve to keep the spaceship running and working until you make enough money to retire.***
+
 
 === Overall Idea ===
 A spaceship that gains credits as it flies through the galaxy. To keep getting credits, you have to keep the spaceship working by pressing buttons on the control panel. Once the player reaches 1 million credits, they have enough to retire and win the game. However, if the spaceship is not maintained, it will blow up. 
@@ -26,4 +27,25 @@ A spaceship that gains credits as it flies through the galaxy. To keep getting c
 3. If the user maintains the ship until they have 10,000 credits, thier ship will upgrade (with a new picture or animation).
     The new ship will gain credits at a rate of 500 per second, but will the user will have to move faster to maintain the ship - 2x speed.
         The user will once again get an upgrade at 100,000 credits: the new ship will gain credits at a rate of 2000 per second but the bars will change at 3x the original speed.
-4. If the user maintains the ship until they reach 1 Mil credits, they are able to retire and win the game. 
+4. If the user maintains the ship until they reach 1 million credits, they retire and win the game. 
+
+
+=== Task Checklist for MVP ===
+Create a repo for your tomagotchi pet - DONE
+Make a commit after you finish each one of the following:
+Instatiate your Tomagotchi
+Display a character of your choice on the screen to represent **your spaceship**.
+Display the following metrics for **your spaceship**:
+- Hunger (1-10 scale) -> **Fuel**
+- Sleepiness (1-10 scale) -> **Oxygen**
+- Boredom (1-10 scale) -> **Radiation**
+- Age -> **Credits**
+Add buttons to the screen to **interact and maintain your spaceship**.
+Add the ability to name your **spaceship**.
+Style the page.
+Increase **credits overtime**.
+**Change** your **spaceship's fuel, oxygen and radiation** metrics on an interval of your choosing.
+Your **spaceship** should **explode** if **fuel, oxygen and radiation** hits **0 or** 10.
+**Upgrade your spaceship** at certain **credit levels**.
+Animate your **spaceship** across the screen while it's alive.
+
