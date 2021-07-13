@@ -63,8 +63,8 @@ Animate your **spaceship** across the screen while it's alive.
 11. Put content in aside: bars/counts for fuel/oxygen/radiation, buttons to increase/decrease each of those stats - DONE
 12. Put content in footer: author name, any attributions for content used, link to github? - DONE
 13. Assign classes/ids, add any necessary spans/divs, other appropriate content - DONE
-14. Add CSS defaults/basics to main.css - change spacing and any icons/interactive things that will influence how the JS will function
-15. app.js: Create game class/object - add key/value pairs for starting: credits, fuel, oxygen, and radiation
+14. Add CSS defaults/basics to main.css - change spacing and any icons/interactive things that will influence how the JS will function - DONE
+15. app.js: Create game class/object - add key/value pairs for starting: credits, fuel, oxygen, and radiation - DONE
 16. Add method to start the game after user inputs spaceship name and clicks button
 17. Add method to increase credits by appropriate amount each second
 18. Add method to show increase in credits on game screen
