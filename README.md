@@ -50,7 +50,6 @@ Your **spaceship** should **explode** if **fuel, oxygen and radiation** hits **0
 Animate your **spaceship** across the screen while it's alive.
 
 
-
 === Breakdown of Milestones ===
 1. Finish overall planning on README file
     a. Finish fleshing out with: add explanation of what project is, why I made it, explanation of technologies used, etc. 
@@ -98,3 +97,7 @@ A. Icebox/Stretch Goals
     2. Add new bars and buttons for additional stats the user should keep track of when the spaceship upgrades
     3. Alter how the stats change to a random interval or a random amount at each interval (or both!) to make the game more dynamic and challenging
     4. Add a method for random events that drastically change the ships stats with a log message to increase immersion. 
+
+
+=== WIREFRAME for MVP ===
+![mvp-wireframe](./images/Project-0-Wireframe.png)
