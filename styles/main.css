@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* look up box command */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
