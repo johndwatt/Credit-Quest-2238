@@ -52,46 +52,43 @@ Animate your **spaceship** across the screen while it's alive.
 
 === Breakdown of Milestones ===
 1. Finish overall planning on README file - DONE
-    a. Finish fleshing out with: add explanation of what project is, why I made it, explanation of technologies used, etc. 
-    b. Reformat README to be half sales-pitch/half explanation
-2. Create wireframe to visualize the final product on the screen - DONE
-    a. Add to README file - DONE
-3. Structure index.html file
-    a. Add boilerplate, links to css and js file, and link to jQuery - DONE
-    b. Add semantic HTML: a header, main, aside, and footer
-    c. Put content in header: title, backstory paragraph, input for spaceship name, button to start game
-    d. Put content in main: img for background, imgs for 3 spaceships
-    e. Put content in aside: bars/counts for fuel/oxygen/radiation, buttons to increase/decrease each of those stats
-    f. Put content in footer: author name, any attributions for content used, link to github? 
-    g. Assign classes/ids, add any necessary spans/divs, other appropriate content
-4. Add CSS defaults/basics to main.css
-    a. change spacing and any icons/interactive things that will influence how the JS will function
-5. Add functionality with JS to app.js
-    a. Create game class/object - add key/value pairs for starting: credits, fuel, oxygen, and radiation
-    b. Add method to start the game after user inputs spaceship name and clicks button
-    c. Add method to increase credits by appropriate amount each second
-        -Add method to show increase in credits on game screen
-    d. Add method to reduce fuel supply at interval
-        -Add method to maintain fuel supply via button click
-        -Add lose condition if fuel reaches 0, cap fuel at 10
-    e. Add method to reduce oxygen supply at different interval
-        -Add method to maintain oxygen supply via button click
-        -Add lose condition if oxygen reaches 0, cap oxygen at 10
-    f. Add method to increase radiation at another interval
-        -Add method to reduce radiation via button click
-        -Add lose condition if radiation reaches 10, cap radiation at 0
-    g. Add method for upgrading ship at 10,000 credits - decrease interval and increase credits per second 500
-        -Add a class to update the ship that is displayed to a medium-sized ship
-    h. Add method for upgrading ship at 100,000 credits - decrease interval and increase credits per second to 5000
-        -Add a class to update the ship that is displayed to a large-sized ship
-    i. Add win condition for reaching 1 Million credits and retiring
-        -Add game reset to make sure game goes back to start once retirement is reached and acknowleged by user. 
-    j. Test game functionality and fix any other problems not captured here
-6. Add more advanced styling to main.css
-    a. Add padding and margin to make everything look properly spaced
-    b. Add a theme with color, fonts, and borders to stylize the page content and buttons
-    c. Add animations to the images of the spaceships
-    d. Add any other misc styling to make the game come alive
+2. Finish fleshing out with: add explanation of what project is, why I made it, explanation of technologies used, etc. 
+3. Reformat README to be half sales-pitch/half explanation
+4. Create wireframe to visualize the final product on the screen - DONE
+5. Add to README file - DONE
+7. Index.html: Add boilerplate, links to css and js file, and link to jQuery - DONE
+8. Add semantic HTML: a header, main, aside, and footer - DONE
+9. Put content in header: title, backstory paragraph, input for spaceship name, button to start game
+10. Put content in main: img for background, imgs for 3 spaceships
+11. Put content in aside: bars/counts for fuel/oxygen/radiation, buttons to increase/decrease each of those stats
+12. Put content in footer: author name, any attributions for content used, link to github? 
+13. Assign classes/ids, add any necessary spans/divs, other appropriate content
+14. Add CSS defaults/basics to main.css - change spacing and any icons/interactive things that will influence how the JS will function
+15. app.js: Create game class/object - add key/value pairs for starting: credits, fuel, oxygen, and radiation
+16. Add method to start the game after user inputs spaceship name and clicks button
+17. Add method to increase credits by appropriate amount each second
+18. Add method to show increase in credits on game screen
+19. Add method to reduce fuel supply at interval
+20. Add method to maintain fuel supply via button click
+21. Add lose condition if fuel reaches 0, cap fuel at 10
+22. Add method to reduce oxygen supply at different interval
+23. Add method to maintain oxygen supply via button click
+24. Add lose condition if oxygen reaches 0, cap oxygen at 10
+25. Add method to increase radiation at another interval
+26. Add method to reduce radiation via button click
+27. Add lose condition if radiation reaches 10, cap radiation at 0
+28. Add method for upgrading ship at 10,000 credits - decrease interval and increase credits per second 500
+29. Add a class to update the ship that is displayed to a medium-sized ship
+30. Add method for upgrading ship at 100,000 credits - decrease interval and increase credits per second to 5000
+31. Add a class to update the ship that is displayed to a large-sized ship
+32. Add win condition for reaching 1 Million credits and retiring
+33. Add game reset to make sure game goes back to start once retirement is reached and acknowleged by user. 
+34. Test game functionality and fix any other problems not captured here
+35. Add more advanced styling to main.css
+36. Add padding and margin to make everything look properly spaced
+37. Add a theme with color, fonts, and borders to stylize the page content and buttons
+38. Add animations to the images of the spaceships
+39. Add any other misc styling to make the game come alive
 
 A. Icebox/Stretch Goals
     1. Add a log with various points documenting when the buttons are clicked - example: "Added fuel to spaceshipName" when user clicks add fuel button
