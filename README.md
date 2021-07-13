@@ -51,12 +51,13 @@ Animate your **spaceship** across the screen while it's alive.
 
 
 === Breakdown of Milestones ===
-1. Finish overall planning on README file
+1. Finish overall planning on README file - DONE
     a. Finish fleshing out with: add explanation of what project is, why I made it, explanation of technologies used, etc. 
-2. Create wireframe to visualize the final product on the screen
-    a. Add to README file
+    b. Reformat README to be half sales-pitch/half explanation
+2. Create wireframe to visualize the final product on the screen - DONE
+    a. Add to README file - DONE
 3. Structure index.html file
-    a. Add boilerplate, links to css and js file, and link to jQuery
+    a. Add boilerplate, links to css and js file, and link to jQuery - DONE
     b. Add semantic HTML: a header, main, aside, and footer
     c. Put content in header: title, backstory paragraph, input for spaceship name, button to start game
     d. Put content in main: img for background, imgs for 3 spaceships
