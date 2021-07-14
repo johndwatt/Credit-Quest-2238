@@ -13,12 +13,14 @@ const game = {
     setOxygenInterval: 0,
     radGainInt: 2000,
     setRadInterval: 0,
+    setBounceInterval: 0,
     startGame (){
         game.grabShipName();
         game.handleUpgradesAndCredits();
         game.fuelLoss();
         game.oxygenLoss();
         game.radGain();
+        game.makeShipBounce();
     }, 
     grabShipName (){
         const shipName = $("#spaceship-name").val();
@@ -78,6 +80,7 @@ const game = {
             game.fuel = 100;
         } else {
             game.fuel = game.fuel += 100;
+
         }
         $("#fuel-count").text(`Fuel: ${game.fuel}%`);
     },
@@ -102,6 +105,7 @@ const game = {
         clearInterval(game.setFuelInterval);
         clearInterval(game.setOxygenInterval);
         clearInterval(game.setRadInterval);
+        clearInterval(game.setBounceInterval);
         $("#spaceship-1").addClass("hidden");
         $("#spaceship-2").addClass("hidden");
         $("#spaceship-1").addClass("hidden");
@@ -113,7 +117,15 @@ const game = {
         clearInterval(game.setFuelInterval);
         clearInterval(game.setOxygenInterval);
         clearInterval(game.setRadInterval);
+        clearInterval(game.setBounceInterval);
         alert(`CONGRATULATIONS: You accumulated a total of ${score} credits and are able to retire!`);
+    },
+    makeShipBounce(){
+        game.setBounceInterval = setInterval(function (){
+            $("#spaceship-1").toggleClass("animate__animated animate__headShake");
+            $("#spaceship-2").toggleClass("animate__animated animate__headShake");
+            $("#spaceship-3").toggleClass("animate__animated animate__headShake");
+        }, 3000);  
     },
     
 }
