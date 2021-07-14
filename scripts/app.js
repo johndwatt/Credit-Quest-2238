@@ -25,7 +25,9 @@ const game = {
                 game.credits = game.credits += 1000;
                 //console.log(game.credits);
             }
+            $("#credit-count").text(`Current Credits: ${game.credits}`);
         }, 1000);
+        
     },
     
 }

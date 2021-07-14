@@ -66,8 +66,8 @@ Animate your **spaceship** across the screen while it's alive.
 14. Add CSS defaults/basics to main.css - change spacing and any icons/interactive things that will influence how the JS will function - DONE
 15. app.js: Create game class/object - add key/value pairs for starting: credits, fuel, oxygen, and radiation - DONE
 16. Add method to start the game after user inputs spaceship name and clicks button - DONE
-17. Add method to increase credits by appropriate amount each second
-18. Add method to show increase in credits on game screen
+17. Add method to increase credits by appropriate amount each second - DONE
+18. Add method to show increase in credits on game screen - DONE
 19. Add method to reduce fuel supply at interval
 20. Add method to maintain fuel supply via button click
 21. Add lose condition if fuel reaches 0, cap fuel at 10
@@ -95,6 +95,8 @@ A. Icebox/Stretch Goals
     2. Add new bars and buttons for additional stats the user should keep track of when the spaceship upgrades
     3. Alter how the stats change to a random interval or a random amount at each interval (or both!) to make the game more dynamic and challenging
     4. Add a method for random events that drastically change the ships stats with a log message to increase immersion. 
+    5. Add a way to stop the start game button from being pushed more than once
+    6. 
 
 
 === WIREFRAME for MVP ===
