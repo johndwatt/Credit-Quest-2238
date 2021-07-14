@@ -65,7 +65,7 @@ Animate your **spaceship** across the screen while it's alive.
 13. Assign classes/ids, add any necessary spans/divs, other appropriate content - DONE
 14. Add CSS defaults/basics to main.css - change spacing and any icons/interactive things that will influence how the JS will function - DONE
 15. app.js: Create game class/object - add key/value pairs for starting: credits, fuel, oxygen, and radiation - DONE
-16. Add method to start the game after user inputs spaceship name and clicks button
+16. Add method to start the game after user inputs spaceship name and clicks button - DONE
 17. Add method to increase credits by appropriate amount each second
 18. Add method to show increase in credits on game screen
 19. Add method to reduce fuel supply at interval
