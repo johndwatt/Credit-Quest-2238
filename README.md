@@ -78,17 +78,17 @@ Animate your **spaceship** across the screen while it's alive.
 26. Add method to reduce radiation via button click - DONE
 27. Add lose condition if radiation reaches 10, cap radiation at 0 - DONE
 28. Add method for upgrading ship at 10,000 credits - decrease interval and increase credits per second 500 - IN PROGRESS
-29. Add a class to update the ship that is displayed to a medium-sized ship
+29. Add a class to update the ship that is displayed to a medium-sized ship - DONE
 30. Add method for upgrading ship at 100,000 credits - decrease interval and increase credits per second to 5000 - IN PROGRESS
-31. Add a class to update the ship that is displayed to a large-sized ship
+31. Add a class to update the ship that is displayed to a large-sized ship - DONE
 32. Add win condition for reaching 1 Million credits and retiring - DONE
 33. Add game reset to make sure game goes back to start once retirement is reached and acknowleged by user. 
-34. Test game functionality and fix any other problems not captured here
-35. Add more advanced styling to main.css
-36. Add padding and margin to make everything look properly spaced
-37. Add a theme with color, fonts, and borders to stylize the page content and buttons
-38. Add animations to the images of the spaceships
-39. Add any other misc styling to make the game come alive
+34. Test game functionality and fix any other problems not captured here - DONE
+35. Add more advanced styling to main.css - DONE
+36. Add padding and margin to make everything look properly spaced - IN PROGRESS
+37. Add a theme with color, fonts, and borders to stylize the page content and buttons - DONE
+38. Add animations to the images of the spaceships - DONE
+39. Add any other misc styling to make the game come alive - DONE
 
 A. Icebox/Stretch Goals
     1. Add a log with various points documenting when the buttons are clicked - example: "Added fuel to spaceshipName" when user clicks add fuel button

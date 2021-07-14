@@ -35,7 +35,6 @@ const game = {
                 $("#spaceship-2").addClass("hidden");
                 $("#spaceship-3").removeClass("hidden");
             } else if (game.credits >= 1000000) {
-                console.log("triggered win");
                 game.winCondition(game.credits);
             } else {
                 game.credits = game.credits += 1000;
@@ -79,8 +78,7 @@ const game = {
         if (game.fuel >= 100){
             game.fuel = 100;
         } else {
-            game.fuel = game.fuel += 100;
-
+            game.fuel = game.fuel += 10;
         }
         $("#fuel-count").text(`Fuel: ${game.fuel}%`);
     },
@@ -88,7 +86,7 @@ const game = {
         if (game.oxygen >= 100){
             game.oxygen = 100;
         } else {
-            game.oxygen = game.oxygen += 100;
+            game.oxygen = game.oxygen += 20;
         }
         $("#oxygen-count").text(`Oxygen: ${game.oxygen}%`);
     },
@@ -96,7 +94,7 @@ const game = {
         if (game.radiation <= 0){
             game.radiation = 0;
         } else {
-            game.radiation = game.radiation -= 100;
+            game.radiation = game.radiation -= 50;
         }
         $("#rad-count").text(`Radiation: ${game.radiation}%`);
     },
@@ -119,6 +117,7 @@ const game = {
         clearInterval(game.setRadInterval);
         clearInterval(game.setBounceInterval);
         alert(`CONGRATULATIONS: You accumulated a total of ${score} credits and are able to retire!`);
+
     },
     makeShipBounce(){
         game.setBounceInterval = setInterval(function (){
