@@ -11,11 +11,14 @@ const game = {
     setFuelInterval: 0,
     oxygenLossInt: 1000,
     setOxygenInterval: 0,
+    radGainInt: 1000,
+    setRadInterval: 0,
     startGame (){
         game.grabShipName();
         game.countCredits();
         game.fuelLoss();
         game.oxygenLoss();
+        game.radGain();
     }, 
     grabShipName (){
         const shipName = $("#spaceship-name").val();
@@ -53,6 +56,16 @@ const game = {
             $("#oxygen-count").text(`Oxygen: ${game.oxygen}%`);
         }, game.oxygenLossInt);
     },
+    radGain (){
+        game.setRadInterval = setInterval(function (){
+            if (game.radiation >= 100){
+                game.loseCondition("radiation", game.credits);
+            } else {
+                game.radiation = game.radiation += 20;
+            }
+            $("#rad-count").text(`Radiation: ${game.radiation}%`);
+        }, game.radGainInt);
+    },
     addFuel (){
         if (game.fuel >= 100){
             game.fuel = 100;
@@ -73,6 +86,7 @@ const game = {
         clearInterval(game.setCreditInterval);
         clearInterval(game.setFuelInterval);
         clearInterval(game.setOxygenInterval);
+        clearInterval(game.setRadInterval);
         alert(`GAME OVER: Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);
     },
     
