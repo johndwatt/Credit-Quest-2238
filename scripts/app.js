@@ -1,33 +1,40 @@
 const game = {
     credits: 0,
-    fuel: 10,
-    oxygen: 10,
+    fuel: 100,
+    oxygen: 100,
     radiation: 0,
     startGame (){
         game.grabShipName();
         game.countCredits();
+        game.fuelLoss();
     }, 
     grabShipName (){
         const shipName = $("#spaceship-name").val();
         $("#named-ship").text(shipName);
     },
     countCredits (){
-        //console.log("CC works");
-        //when button is clicked - DONE, credits go up by a certain amount depending on how many credits the user already has. 
         setInterval(function (){
             if (game.credits < 10000) {
                 game.credits = game.credits += 100;
-                //console.log(game.credits);
             } else if (game.credits >= 100000) {
                 game.credits = game.credits += 5000;
-                //console.log(game.credits);
             } else {
                 game.credits = game.credits += 1000;
-                //console.log(game.credits);
             }
             $("#credit-count").text(`Current Credits: ${game.credits}`);
         }, 1000);
-        
+    },
+    fuelLoss (){
+        setInterval(function (){
+            if (game.fuel > 100){
+                game.fuel = 100;
+                console.log(game.fuel);
+            } else {
+                game.fuel = game.fuel -= 20;
+                console.log(game.fuel);
+            }
+            $("#fuel-count").text(`Fuel: ${game.fuel}%`);
+        }, 3000);
     },
     
 }

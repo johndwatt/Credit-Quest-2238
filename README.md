@@ -96,7 +96,7 @@ A. Icebox/Stretch Goals
     3. Alter how the stats change to a random interval or a random amount at each interval (or both!) to make the game more dynamic and challenging
     4. Add a method for random events that drastically change the ships stats with a log message to increase immersion. 
     5. Add a way to stop the start game button from being pushed more than once
-    6. 
+    6. refactor code to be more programmatic
 
 
 === WIREFRAME for MVP ===
