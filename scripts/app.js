@@ -11,8 +11,6 @@ const game = {
     setFuelInterval: 0,
     oxygenLossInt: 1000,
     setOxygenInterval: 0,
-    //oxygenInterval: 1000,
-    //radInterval: 1000,
     startGame (){
         game.grabShipName();
         game.countCredits();
@@ -63,15 +61,24 @@ const game = {
         }
         $("#fuel-count").text(`Fuel: ${game.fuel}%`);
     },
+    addOxygen (){
+        if (game.oxygen >= 100){
+            game.oxygen = 100;
+        } else {
+            game.oxygen = game.oxygen += 10;
+        }
+        $("#oxygen-count").text(`Oxygen: ${game.oxygen}%`);
+    },
     loseCondition (statFail, score){
         clearInterval(game.setCreditInterval);
         clearInterval(game.setFuelInterval);
+        clearInterval(game.setOxygenInterval);
         alert(`GAME OVER: Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);
-        //console.log("Game over triggered");
     },
     
 }
 
 
 $("#start-btn").on("click", game.startGame);
-$("#fuel-btn").on("click", game.addFuel)
+$("#fuel-btn").on("click", game.addFuel);
+$("#oxygen-btn").on("click", game.addOxygen);
