@@ -74,7 +74,7 @@ Animate your **spaceship** across the screen while it's alive.
 22. Add method to reduce oxygen supply at different interval- DONE
 23. Add method to maintain oxygen supply via button click - DONE
 24. Add lose condition if oxygen reaches 0, cap oxygen at 10 - DONE
-25. Add method to increase radiation at another interval 
+25. Add method to increase radiation at another interval - DONE
 26. Add method to reduce radiation via button click
 27. Add lose condition if radiation reaches 10, cap radiation at 0
 28. Add method for upgrading ship at 10,000 credits - decrease interval and increase credits per second 500

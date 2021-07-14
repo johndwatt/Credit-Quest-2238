@@ -82,6 +82,14 @@ const game = {
         }
         $("#oxygen-count").text(`Oxygen: ${game.oxygen}%`);
     },
+    reduceRad (){
+        if (game.radiation <= 0){
+            game.radiation = 0;
+        } else {
+            game.radiation = game.radiation -= 10;
+        }
+        $("#rad-count").text(`Radiation: ${game.radiation}%`);
+    },
     loseCondition (statFail, score){
         clearInterval(game.setCreditInterval);
         clearInterval(game.setFuelInterval);
@@ -96,3 +104,4 @@ const game = {
 $("#start-btn").on("click", game.startGame);
 $("#fuel-btn").on("click", game.addFuel);
 $("#oxygen-btn").on("click", game.addOxygen);
+$("#rad-btn").on("click", game.reduceRad);
