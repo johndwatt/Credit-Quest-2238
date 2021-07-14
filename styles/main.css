@@ -1,3 +1,8 @@
+/* Nebulous Space Background by Miontomaru Magnusson: https://miontomaru.itch.io/nebulous-space-background*/
+/* DID NOT USE Voxel Spaceship Collection by Max Parata: https://maxparata.itch.io/voxel-spaceships 
+Blue, Green, and Red Spacecraft Asset by Guardian https://guardian5.itch.io/blue-green-and-red-spacecraft-asset
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +11,7 @@
 body {
     padding: 35px;
     border: 5px solid #000000;
+    min-height: 100vh;
 }
 
 header {
@@ -37,12 +43,17 @@ main {
 section {
     border: 5px solid #000000;
     margin: 10px;
-    height: 300px;
-    width: 70%;
+    height: 400px;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(/images/NebulousSpace_1280x720.png);
+    background-size: cover;
+    background-color: #000000;
+
 }
+
 section div {
     margin: 0 auto;
 }
@@ -55,4 +66,11 @@ aside {
 
 footer {
     border-top: 5px solid #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-evenly;
 }
