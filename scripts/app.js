@@ -26,17 +26,20 @@ const game = {
     },
     fuelLoss (){
         setInterval(function (){
-            if (game.fuel > 100){
-                game.fuel = 100;
-                console.log(game.fuel);
-            } else {
-                game.fuel = game.fuel -= 20;
-                console.log(game.fuel);
-            }
+            game.fuel = game.fuel -= 20;
             $("#fuel-count").text(`Fuel: ${game.fuel}%`);
         }, 3000);
+    },
+    addFuel (){
+        if (game.fuel >= 100){
+            game.fuel = 100;
+        } else {
+            game.fuel = game.fuel += 10;
+        }
+        $("#fuel-count").text(`Fuel: ${game.fuel}%`);
     },
     
 }
 
 $("#start-btn").on("click", game.startGame);
+$("#fuel-btn").on("click", game.addFuel)

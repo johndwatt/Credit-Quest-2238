@@ -68,8 +68,8 @@ Animate your **spaceship** across the screen while it's alive.
 16. Add method to start the game after user inputs spaceship name and clicks button - DONE
 17. Add method to increase credits by appropriate amount each second - DONE
 18. Add method to show increase in credits on game screen - DONE
-19. Add method to reduce fuel supply at interval
-20. Add method to maintain fuel supply via button click
+19. Add method to reduce fuel supply at interval - DONE
+20. Add method to maintain fuel supply via button click - DONE
 21. Add lose condition if fuel reaches 0, cap fuel at 10
 22. Add method to reduce oxygen supply at different interval
 23. Add method to maintain oxygen supply via button click
