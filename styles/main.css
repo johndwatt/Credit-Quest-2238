@@ -72,8 +72,16 @@ footer {
 
 footer div {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 10px;
+    justify-content: space-around;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+footer div p {
+    font-size: 15px;
 }
 
 .hidden {

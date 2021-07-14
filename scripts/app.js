@@ -30,11 +30,15 @@ const game = {
                 game.credits = game.credits += 100;
             } else if (game.credits >= 100000 && game.credits <= 999999) {
                 game.credits = game.credits += 5000;
+                $("#spaceship-2").addClass("hidden");
+                $("#spaceship-3").removeClass("hidden");
             } else if (game.credits >= 1000000) {
                 console.log("triggered win");
                 game.winCondition(game.credits);
             } else {
                 game.credits = game.credits += 1000;
+                $("#spaceship-1").addClass("hidden");
+                $("#spaceship-2").removeClass("hidden");
             }
             $("#credit-count").text(`Current Credits: ${game.credits}`);
         }, game.countCreditsInt);
@@ -98,6 +102,10 @@ const game = {
         clearInterval(game.setFuelInterval);
         clearInterval(game.setOxygenInterval);
         clearInterval(game.setRadInterval);
+        $("#spaceship-1").addClass("hidden");
+        $("#spaceship-2").addClass("hidden");
+        $("#spaceship-1").addClass("hidden");
+        $("#explosion").removeClass("hidden");
         alert(`GAME OVER: Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);
     },
     winCondition(score){
