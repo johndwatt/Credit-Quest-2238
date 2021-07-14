@@ -7,14 +7,17 @@ const game = {
     radiation: 0,
     countCreditsInt: 1000,
     setCreditInterval: 0,
-    fuelLossInt: 1000,
+    fuelLossInt: 3000,
     setFuelInterval: 0,
+    oxygenLossInt: 1000,
+    setOxygenInterval: 0,
     //oxygenInterval: 1000,
     //radInterval: 1000,
     startGame (){
         game.grabShipName();
         game.countCredits();
         game.fuelLoss();
+        game.oxygenLoss();
     }, 
     grabShipName (){
         const shipName = $("#spaceship-name").val();
@@ -41,6 +44,16 @@ const game = {
             }
             $("#fuel-count").text(`Fuel: ${game.fuel}%`);
         }, game.fuelLossInt);
+    },
+    oxygenLoss (){
+        game.setOxygenInterval = setInterval(function (){
+            if (game.oxygen <= 0){
+                game.loseCondition("oxygen", game.credits);
+            } else {
+                game.oxygen = game.oxygen -= 20;
+            }
+            $("#oxygen-count").text(`Oxygen: ${game.oxygen}%`);
+        }, game.oxygenLossInt);
     },
     addFuel (){
         if (game.fuel >= 100){
