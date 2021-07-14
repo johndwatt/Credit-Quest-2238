@@ -3,9 +3,56 @@
     padding: 0;
     /* look up box command */
 }
+body {
+    padding: 35px;
+    border: 5px solid #000000;
+}
+
+header {
+    text-align: center;
+    margin: 5px;
+}
+
+header h1 {
+    text-align: center;
+    margin: 5px;
+    border-bottom: 5px solid #000000;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+}
+
+header p {
+    line-height: 1.5;
+}
 
 main {
     display: flex;
     justify-content: center;
     padding: 10px;
+}
+
+section {
+    border: 5px solid #000000;
+    margin: 10px;
+    height: 300px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section div {
+    margin: 0 auto;
+}
+
+aside {
+    border: 5px solid #000000;
+    margin: 10px;
+    padding: 20px;
+}
+
+footer {
+    border-top: 5px solid #000000;
 }

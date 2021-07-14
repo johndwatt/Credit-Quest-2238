@@ -14,26 +14,27 @@
 </head>
 <body>
     <header>
-        <h1>GAME TITLE</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur totam nam ut ex deleniti nesciunt dolorem dolorum exercitationem voluptate doloremque, voluptatum quam. Ipsum, harum cumque asperiores pariatur cum voluptas.</p>
-        <div>
+        <h1>CREDIT QUEST: 2138</h1>
+        <p>It is the year 2138. Humanity is testing new spaceships in its effort to become an intergalactic species. Fed up with the mundane day-to-day of Earth life, you spend your last credits on spaceship flight training and purchase your very own spaceship. You sign a contract to test the limits of spaceflight in certain uncharted areas of the galaxy in exchange for a steady flow of credits. Though the move is risky, and flying in uncharted areas can be dangerous, you know you can retire and live in comfort if you earn 1 million credits. With contract in hand, you ready yourself to take flight to the stars. There is just one last task before you speed off to earn your fortune...</p>            
+        <div id="onload-popup">
             <p>Name your spaceship here:</p>
             <input id="spaceship-name" type="text">
-            <button id="start-btn">Start your journey</button>
+            <button id="start-btn">Start your journey!</button>
         </div>
+        <h2 id="credit-count">Current Credits: 0</h2>
     </header>
     <main>
         <section>
             <div>
                 <p id="named-ship"></p>
+                <img id="spaceship-1" src="#" alt="#">
             </div>
-            <img id="spaceship-1" src="#" alt="#">
             <img id="spaceship-2" src="#" alt="#">
             <img id="spaceship-3" src="#" alt="#">
         </section>
         <aside id="control-panel">
             <h3>CONTROL PANEL</h3>
-            <h4 id="credit-count">Current Credits: 0</h4>
+
             <p id="fuel-count">Fuel: 100%</p>
             <button id="fuel-btn">Add Fuel</button>
             <p id="oxygen-count">Oxygen: 100%</p>
