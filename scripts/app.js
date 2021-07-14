@@ -7,15 +7,15 @@ const game = {
     radiation: 0,
     countCreditsInt: 1000,
     setCreditInterval: 0,
-    fuelLossInt: 3000,
+    fuelLossInt: 5000,
     setFuelInterval: 0,
-    oxygenLossInt: 1000,
+    oxygenLossInt: 3000,
     setOxygenInterval: 0,
-    radGainInt: 1000,
+    radGainInt: 2000,
     setRadInterval: 0,
     startGame (){
         game.grabShipName();
-        game.countCredits();
+        game.handleUpgradesAndCredits();
         game.fuelLoss();
         game.oxygenLoss();
         game.radGain();
@@ -24,12 +24,15 @@ const game = {
         const shipName = $("#spaceship-name").val();
         $("#named-ship").text(shipName);
     },
-    countCredits (){
+    handleUpgradesAndCredits (){
         game.setCreditInterval = setInterval(function (){
             if (game.credits < 10000) {
                 game.credits = game.credits += 100;
-            } else if (game.credits >= 100000) {
+            } else if (game.credits >= 100000 && game.credits <= 999999) {
                 game.credits = game.credits += 5000;
+            } else if (game.credits >= 1000000) {
+                console.log("triggered win");
+                game.winCondition(game.credits);
             } else {
                 game.credits = game.credits += 1000;
             }
@@ -70,7 +73,7 @@ const game = {
         if (game.fuel >= 100){
             game.fuel = 100;
         } else {
-            game.fuel = game.fuel += 10;
+            game.fuel = game.fuel += 100;
         }
         $("#fuel-count").text(`Fuel: ${game.fuel}%`);
     },
@@ -78,7 +81,7 @@ const game = {
         if (game.oxygen >= 100){
             game.oxygen = 100;
         } else {
-            game.oxygen = game.oxygen += 10;
+            game.oxygen = game.oxygen += 100;
         }
         $("#oxygen-count").text(`Oxygen: ${game.oxygen}%`);
     },
@@ -86,7 +89,7 @@ const game = {
         if (game.radiation <= 0){
             game.radiation = 0;
         } else {
-            game.radiation = game.radiation -= 10;
+            game.radiation = game.radiation -= 100;
         }
         $("#rad-count").text(`Radiation: ${game.radiation}%`);
     },
@@ -97,6 +100,13 @@ const game = {
         clearInterval(game.setRadInterval);
         alert(`GAME OVER: Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);
     },
+    winCondition(score){
+        clearInterval(game.setCreditInterval);
+        clearInterval(game.setFuelInterval);
+        clearInterval(game.setOxygenInterval);
+        clearInterval(game.setRadInterval);
+        alert(`CONGRATULATIONS: You accumulated a total of ${score} credits and are able to retire!`);
+    },
     
 }
 
@@ -105,3 +115,30 @@ $("#start-btn").on("click", game.startGame);
 $("#fuel-btn").on("click", game.addFuel);
 $("#oxygen-btn").on("click", game.addOxygen);
 $("#rad-btn").on("click", game.reduceRad);
+
+
+//WORK IN PROGRESS
+/*
+    handleUpgradesAndCredits (){
+        game.setCreditInterval = setInterval(function (){
+            if (game.credits < 10000) {
+                game.credits = game.credits += 100;
+                //FIXME: problem - interval is still going at original pace, will need to stop and restart interval for this to work properly 
+                //game.fuelLossInt = 5000;
+                //game.oxygenLossInt = 3000;
+                //game.radGainInt = 2000;
+            } else if (game.credits >= 100000) {
+                game.credits = game.credits += 5000;
+                //game.fuelLossInt = 1000;
+                //game.oxygenLossInt = 3000;
+                //game.radGainInt = 1000;
+            } else {
+                game.credits = game.credits += 1000;
+                //game.fuelLossInt = 300;
+                //game.oxygenLossInt = 3000;
+                //game.radGainInt = 1500;
+            }
+            $("#credit-count").text(`Current Credits: ${game.credits}`);
+        }, game.countCreditsInt);
+    },
+*/

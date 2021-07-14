@@ -75,13 +75,13 @@ Animate your **spaceship** across the screen while it's alive.
 23. Add method to maintain oxygen supply via button click - DONE
 24. Add lose condition if oxygen reaches 0, cap oxygen at 10 - DONE
 25. Add method to increase radiation at another interval - DONE
-26. Add method to reduce radiation via button click
-27. Add lose condition if radiation reaches 10, cap radiation at 0
-28. Add method for upgrading ship at 10,000 credits - decrease interval and increase credits per second 500
+26. Add method to reduce radiation via button click - DONE
+27. Add lose condition if radiation reaches 10, cap radiation at 0 - DONE
+28. Add method for upgrading ship at 10,000 credits - decrease interval and increase credits per second 500 - IN PROGRESS
 29. Add a class to update the ship that is displayed to a medium-sized ship
-30. Add method for upgrading ship at 100,000 credits - decrease interval and increase credits per second to 5000
+30. Add method for upgrading ship at 100,000 credits - decrease interval and increase credits per second to 5000 - IN PROGRESS
 31. Add a class to update the ship that is displayed to a large-sized ship
-32. Add win condition for reaching 1 Million credits and retiring
+32. Add win condition for reaching 1 Million credits and retiring - DONE
 33. Add game reset to make sure game goes back to start once retirement is reached and acknowleged by user. 
 34. Test game functionality and fix any other problems not captured here
 35. Add more advanced styling to main.css
