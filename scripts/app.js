@@ -128,6 +128,7 @@ const game = {
             game.fuel = game.fuel += 10;
         }
         $("#fuel-count").text(`Fuel: ${game.fuel}%`);
+        $("#fuel-meter").css(`width`, `${game.fuel}%`);
     },
     addOxygen (){
         if (game.oxygen >= 100){
@@ -136,6 +137,7 @@ const game = {
             game.oxygen = game.oxygen += 20;
         }
         $("#oxygen-count").text(`Oxygen: ${game.oxygen}%`);
+        $("#oxygen-meter").css(`width`, `${game.oxygen}%`);
     },
     reduceRad (){
         if (game.radiation <= 0){
