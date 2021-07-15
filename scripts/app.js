@@ -6,12 +6,14 @@ const game = {
     fuel: 100,
     oxygen: 100,
     radiation: 0,
+    reactor: 50,
     //INTERVAL SPEEDS
     countCreditsInt: 1000,
     upgradeInt: 1000,
     fuelLossInt: 5000,
     oxygenLossInt: 3000,
     radGainInt: 1500,
+    shiftReactorInt: 1000,
     animateBounceInt: 2000,
     //CLEAR INTERVAL PLACEHOLDERS - DO NOT CHANGE!
     setCreditInterval: 0,
@@ -19,6 +21,7 @@ const game = {
     setFuelInterval: 0,
     setOxygenInterval: 0,
     setRadInterval: 0,
+    setReactorInterval: 0,
     setBounceInterval: 0,
     startGame (){
         game.grabShipName();
@@ -100,6 +103,21 @@ const game = {
             }
             $("#rad-count").text(`Radiation: ${game.radiation}%`);
         }, game.radGainInt);
+    },
+    shiftReactor (){
+        let randNum = Math.floor(Math.random() * 2 + 1);
+        game.setReactorInterval = setInterval(function (){
+            if (game.reactor === 100 | game.reactor === 0){
+                game.loseCondition("reactor", game.credits);
+            } else {
+                if (randNum === 1){
+                    game.reactor = game.reactor += 5;
+                } else {
+                    game.reactor = game.reactor -= 5;
+                }
+            }
+            $("#").text(`Reactor Temp: ${game.reactor} degrees`);
+        }, game.shiftReactorInt);
     },
     addFuel (){
         if (game.fuel >= 100){
