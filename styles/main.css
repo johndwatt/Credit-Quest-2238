@@ -22,7 +22,7 @@ button {
     border: none;
     border-radius: 5px;
 }
-#welcome-container {
+#welcome-container, #loss-container, #win-container {
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -32,11 +32,12 @@ button {
     background-color: rgba(0,0,0,0.8);
 }
 
-#welcome-screen {
+#welcome-screen, #loss-screen, #win-screen {
     text-align: center;
     padding: 30px;
     margin: 8% auto;
     width: 70%;
+    font-size: 20px;
 }
 
 #welcome-screen h1 {

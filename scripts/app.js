@@ -109,7 +109,8 @@ const game = {
         $("#spaceship-2").addClass("hidden");
         $("#spaceship-1").addClass("hidden");
         $("#explosion").removeClass("hidden");
-        alert(`GAME OVER: Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);
+        $("#loss-container").removeClass("hidden");
+        $("#update-loss").text(`Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);
     },
     winCondition(score){
         clearInterval(game.setCreditInterval);
@@ -117,7 +118,8 @@ const game = {
         clearInterval(game.setOxygenInterval);
         clearInterval(game.setRadInterval);
         clearInterval(game.setBounceInterval);
-        alert(`CONGRATULATIONS: You accumulated a total of ${score} credits and are able to retire!`);
+        $("#win-container").removeClass("hidden");
+        $("#update-win").text(`You accumulated a total of ${score} credits and are able to retire!`);
     },
     makeShipBounce(){
         game.setBounceInterval = setInterval(function (){

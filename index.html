@@ -34,7 +34,7 @@
     </div>
     <header>
         <h1>CREDIT QUEST: 2238</h1>
-        <p id="append-here">Your journey has begun; and with it, a steady flow of credits to your bank account! Use the control panel on the right to keep your spaceship running. If you fail to maintain your ship, you may meet an untimely end...</p>     
+        <p>Your journey has begun; and with it, a steady flow of credits to your bank account! Use the control panel on the right to keep your spaceship running. If you fail to maintain your ship, you may meet an untimely end...</p>     
         <h2 id="credit-count">Current Credits: 0</h2>
     </header>
     <main>
@@ -66,20 +66,20 @@
     <div class="hidden" id="loss-container">
         <div id="loss-screen">
             <h1>GAME OVER</h1>
-            <p>placeholder</p>            
+            <p id="update-loss"></p>            
             <div>
                 <p>Try again:</p>
-                <button id="restart-btn">Restart</button>
+                <button class="restart-btn" onClick="window.location.reload();">Restart</button>
             </div>
         </div>
     </div>
     <div class="hidden" id="win-container">
         <div id="win-screen">
             <h1>CONGRATULATIONS!</h1>
-            <p>palceholder</p>            
+            <p id="update-win"></p>            
             <div>
                 <p>Go again:</p>
-                <button id="restart-btn">Restart</button>
+                <button class="restart-btn" onClick="window.location.reload();">Restart</button>
             </div>
         </div>
     </div>
