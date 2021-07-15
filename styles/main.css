@@ -132,6 +132,27 @@ section div {
 	display: none;
 }
 
+.meter {
+    border: 5px solid #36395C;
+    border-radius: 25px;
+    margin: 5px 15px;
+}
+
+.meter #fuel-meter {
+    background-color: #DBC36B;
+}
+
+.meter #oxygen-meter {
+    background-color: #76DB93;
+}
+
+.meter span {
+    display: block;
+    height: 100%;
+    background-color: #6369A8;
+    height: 5px;
+}
+
 /* === ID SELECTORS === */
 #fuel-btn {
 	background-color: #DBC36B;
