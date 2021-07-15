@@ -107,16 +107,16 @@ const game = {
     shiftReactor (){
         let randNum = Math.floor(Math.random() * 2 + 1);
         game.setReactorInterval = setInterval(function (){
-            if (game.reactor === 100 | game.reactor === 0){
+            if (game.reactor >= 100 | game.reactor <= 0){
                 game.loseCondition("reactor", game.credits);
             } else {
                 if (randNum === 1){
-                    game.reactor = game.reactor += 5;
+                    game.reactor = game.reactor += 10;
                 } else {
-                    game.reactor = game.reactor -= 5;
+                    game.reactor = game.reactor -= 10;
                 }
             }
-            $("#").text(`Reactor Temp: ${game.reactor} degrees`);
+            $("#reactor-count").text(`Reactor: ${game.reactor} degrees`);
         }, game.shiftReactorInt);
     },
     addFuel (){
@@ -142,6 +142,14 @@ const game = {
             game.radiation = game.radiation -= 20;
         }
         $("#rad-count").text(`Radiation: ${game.radiation}%`);
+    },
+    increaseReactorTemp (){
+        game.reactor = game.reactor += 5;
+        $("#reactor-count").text(`Reactor: ${game.reactor} degrees`);
+    },
+    decreaseReactorTemp (){
+        game.reactor = game.reactor -= 5;
+        $("#reactor-count").text(`Reactor: ${game.reactor} degrees`);
     },
     clearInts (){
         clearInterval(game.setCreditInterval);
@@ -175,6 +183,8 @@ $("#start-btn").on("click", game.startGame);
 $("#fuel-btn").on("click", game.addFuel);
 $("#oxygen-btn").on("click", game.addOxygen);
 $("#rad-btn").on("click", game.reduceRad);
+$("#reactor-up-btn").on("click", game.increaseReactorTemp);
+$("#reactor-down-btn").on("click", game.decreaseReactorTemp);
 
 
 //WORK IN PROGRESS
