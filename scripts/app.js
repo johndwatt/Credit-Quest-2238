@@ -107,7 +107,7 @@ const game = {
         clearInterval(game.setBounceInterval);
         $("#spaceship-1").addClass("hidden");
         $("#spaceship-2").addClass("hidden");
-        $("#spaceship-1").addClass("hidden");
+        $("#spaceship-3").addClass("hidden");
         $("#explosion").removeClass("hidden");
         $("#loss-container").removeClass("hidden");
         $("#update-loss").text(`Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);

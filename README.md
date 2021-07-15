@@ -77,15 +77,15 @@ Animate your **spaceship** across the screen while it's alive.
 25. Add method to increase radiation at another interval - DONE
 26. Add method to reduce radiation via button click - DONE
 27. Add lose condition if radiation reaches 10, cap radiation at 0 - DONE
-28. Add method for upgrading ship at 10,000 credits - decrease interval and increase credits per second 500 - IN PROGRESS
+28. Add method for upgrading ship at 10,000 credits - decrease interval and increase credits per second 500 - DONE
 29. Add a class to update the ship that is displayed to a medium-sized ship - DONE
-30. Add method for upgrading ship at 100,000 credits - decrease interval and increase credits per second to 5000 - IN PROGRESS
+30. Add method for upgrading ship at 100,000 credits - decrease interval and increase credits per second to 5000 - DONE
 31. Add a class to update the ship that is displayed to a large-sized ship - DONE
 32. Add win condition for reaching 1 Million credits and retiring - DONE
-33. Add game reset to make sure game goes back to start once retirement is reached and acknowleged by user. 
+33. Add game reset to make sure game goes back to start once retirement is reached and acknowleged by user. - DONE
 34. Test game functionality and fix any other problems not captured here - DONE
 35. Add more advanced styling to main.css - DONE
-36. Add padding and margin to make everything look properly spaced - IN PROGRESS
+36. Add padding and margin to make everything look properly spaced - DONE
 37. Add a theme with color, fonts, and borders to stylize the page content and buttons - DONE
 38. Add animations to the images of the spaceships - DONE
 39. Add any other misc styling to make the game come alive - DONE
@@ -93,17 +93,24 @@ Animate your **spaceship** across the screen while it's alive.
 MVP - DONE!
 
 Things to do:
-1. Remove alert for win/loss condition and replace with modals
-2. restart game button
+1. Remove alert for win/loss condition and replace with modals - DONE
+2. restart game button - DONE
 3. change fonts to make it pretty + font sizes - DONE
 4. refactor code to be more programmatic/DRY
+5. go over spacing and margins again, smooth out details in css
+6. add additional images and css animations
+7. add game log with randomly selected phrases when buttons are pushed
+8. add CSS progress bars to control panel
+9. Rewrite/reformat README file
+10. Change control panel stuff to only show up on upgrades
+11. DOUBLE CHECK ALL REQUIREMENTS!!!
 
 A. Icebox/Stretch Goals
     1. Add a log with various points documenting when the buttons are clicked - example: "Added fuel to spaceshipName" when user clicks add fuel button
     2. Add new bars and buttons for additional stats the user should keep track of when the spaceship upgrades
     3. Alter how the stats change to a random interval or a random amount at each interval (or both!) to make the game more dynamic and challenging
     4. Add a method for random events that drastically change the ships stats with a log message to increase immersion. 
-    5. Add a way to stop the start game button from being pushed more than once
+    5. Add a way to stop the start game button from being pushed more than once - DONE
 
 
 === WIREFRAME for MVP ===
