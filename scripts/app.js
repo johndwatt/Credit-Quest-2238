@@ -10,10 +10,10 @@ const game = {
     //INTERVAL SPEEDS
     countCreditsInt: 1000,
     upgradeInt: 1000,
-    fuelLossInt: 5000,
-    oxygenLossInt: 3000,
+    fuelLossInt: 50000,
+    oxygenLossInt: 30000,
     radGainInt: 2000,
-    shiftReactorInt: 1000,
+    shiftReactorInt: 10000,
     animateBounceInt: 2000,
     //CLEAR INTERVAL PLACEHOLDERS - DO NOT CHANGE!
     setCreditInterval: 0,
@@ -144,8 +144,10 @@ const game = {
     reduceRad (){
         if (game.radiation <= 0){
             game.radiation = 0;
-        } else {
+        } else if (game.radiation >= 20){
             game.radiation = game.radiation -= 20;
+        } else if (game.radiation === 10){
+            game.radiation = game.radiation -= 10;
         }
         $("#rad-count").text(`Radiation: ${game.radiation}%`);
         $("#rad-meter").css(`width`, `${game.radiation}%`);
