@@ -1,234 +1,237 @@
+/* === ALL ELEMENTS === */
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-body {
-    padding: 35px;
-    border: 5px solid #36395C;
-    min-height: 100vh;
-    background-color: #52535C;
-    color: #C8CBE1;
-    font-family: 'Noto Serif JP', 'Times New Roman', serif;
-}
-
-h1, h2, h3 {
-    font-family: 'Encode Sans SC', Helvetica, sans-serif;
-}
-
-button {
-    color: #36395C;
-    border: none;
-    border-radius: 5px;
-}
-
-#welcome-container, #loss-container, #win-container {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    background-color: rgba(0,0,0,0.8);
-}
-
-#welcome-screen, #loss-screen, #win-screen {
-    text-align: center;
-    padding: 30px;
-    margin: 8% auto;
-    width: 70%;
-    font-size: 20px;
-}
-
-#loss-screen > *, #win-screen > * {
-    margin: 15px 0;
-}
-
-#welcome-screen h1 {
-    text-align: center;
-    margin: 5px;
-    border-bottom: 5px solid #36395C;
-}
-
-#welcome-screen div {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-#welcome-screen p {
-    line-height: 1.5;
-}
-
-#welcome-screen button, .restart-btn {
-    background-color: #BD95E8;
-    padding: 5px 8px;
-    border-bottom: 2px solid #36395C;
-    border-right: 2px solid #36395C;
-}
-
-#welcome-screen input {
-    padding: 5px 8px;
-    border: none;
-    border-bottom: 2px solid #36395C;
-    border-right: 2px solid #36395C;
-    border-radius: 5px;
-}
-
-#welcome-screen h2 {
-    border: 5px solid #36395C;
-    margin: 0 40%;
-}
-
-header {
-    text-align: center;
-    margin: 5px;
-}
-
-header h1 {
-    text-align: center;
-    margin: 5px;
-    border-bottom: 5px solid #36395C;
-}
-
-header p {
-    line-height: 1.5;
-    margin: 20px 0;
-}
-
-header h2 {
-    border-top: 5px solid #36395C;
-    border-bottom: 5px solid #36395C;
-    margin: 15px 30%;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-section {
-    border: 5px solid #36395C;
-    border-radius: 5px;
-    margin: 10px;
-    height: 500px;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(/images/NebulousSpace_1280x720.png);
-    background-size: cover;
-    background-color: #000000;
-}
-
-section div {
-    margin: 0 auto;
-}
-
-aside {
-    border: 5px solid #36395C;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-    background-color: #6369A8;
-    font-family: 'Encode Sans SC', Helvetica, sans-serif;
-}
-
-aside .panel-section {
-    margin: 10px 0;
-    font-size: 25px;
-}
-
-aside button {
-    padding: 5px 8px;
-    margin-bottom: 15px;
-    border: none;
-}
-
-#fuel-btn {
-    background-color: #DBC36B;
-    border-bottom: 2px solid #36395C;
-    border-right: 2px solid #36395C;
-}
-
-#rad-btn {
-    background-color: #DB9797;
-    border-bottom: 2px solid #36395C;
-    border-right: 2px solid #36395C;
-}
-
-#oxygen-btn {
-    background-color: #76DB93;
-    border-bottom: 2px solid #36395C;
-    border-right: 2px solid #36395C;
-}
-
-#reactor-up-btn, #reactor-down-btn  {
-    background-color: #7DBEE8;
-    border-bottom: 2px solid #36395C;
-    border-right: 2px solid #36395C;
-}
-
-#reactor-up-btn:hover , #reactor-down-btn:hover  {
-    background-color: #7dbde8c1;
-}
-
-button:hover {
-    color: #C8CBE1;
-    cursor: pointer;
-}
-
-#fuel-btn:hover {
-    background-color: #dbc36b9f;
-}
-
-#rad-btn:hover {
-    background-color: #db9797a5;
-}
-
-#oxygen-btn:hover {
-    background-color: #76db93af;
-}
-
-#start-btn:hover {
-    background-color: #bd95e8c4;
-}
-
-footer {
-    border-top: 5px solid #36395C;
-    padding: 10px;
-    text-align: center;
-}
-
-footer div {
-    display: flex;
-    justify-content: space-around;
-}
-
-footer p {
-    margin: 10px 0;
-    font-size: 20px;
-}
-
-footer div p {
-    font-size: 15px;
-}
-
-.hidden {
-    display: none;
-}
-
+/* === ELEMENT SELECTORS === */
 a {
-    color: #828ADB;
-    text-decoration: none;
+	color: #828ADB;
+	text-decoration: none;
 }
 
 a:hover {
-    opacity: 0.8;
+	opacity: 0.8;
+}
+
+aside {
+	background-color: #6369A8;
+	border: 5px solid #36395C;
+	border-radius: 5px;
+	font-family: 'Encode Sans SC', Helvetica, sans-serif;
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+	width: 30%;
+}
+
+aside .panel-section {
+	font-size: 25px;
+	margin: 10px 0;
+}
+
+aside button {
+	border: none;
+	margin-bottom: 15px;
+	padding: 5px 8px;
+}
+
+body {
+	background-color: #52535C;
+	border: 5px solid #36395C;
+	color: #C8CBE1;
+	font-family: 'Noto Serif JP', 'Times New Roman', serif;
+	min-height: 100vh;
+	padding: 35px;
+}
+
+button {
+	border: none;
+	border-radius: 5px;
+	color: #36395C;
+}
+button:hover {
+	color: #C8CBE1;
+	cursor: pointer;
+}
+
+footer {
+	border-top: 5px solid #36395C;
+	padding: 10px;
+	text-align: center;
+}
+
+footer div {
+	display: flex;
+	justify-content: space-around;
+}
+
+footer div p {
+	font-size: 15px;
+}
+
+footer p {
+	font-size: 20px;
+	margin: 10px 0;
+}
+
+h1, h2, h3 {
+	font-family: 'Encode Sans SC', Helvetica, sans-serif;
+}
+
+header {
+	margin: 5px;
+	text-align: center;
+}
+
+header h1 {
+	border-bottom: 5px solid #36395C;
+	margin: 5px;
+	text-align: center;
+}
+
+header h2 {
+	border-bottom: 5px solid #36395C;
+	border-radius: 5px;
+	border-top: 5px solid #36395C;
+	margin: 15px 30%;
+	padding: 5px;
+}
+
+header p {
+	line-height: 1.5;
+	margin: 20px 0;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+section {
+	align-items: center;
+	background-color: #000000;
+	background-image: url(/images/NebulousSpace_1280x720.png);
+	background-size: cover;
+	border: 5px solid #36395C;
+	border-radius: 5px;
+	display: flex;
+	height: 500px;
+	justify-content: center;
+	margin: 10px;
+	width: 60%;
+}
+
+section div {
+	margin: 0 auto;
+}
+
+/* === CLASS SELECTORS === */
+.hidden {
+	display: none;
+}
+
+/* === ID SELECTORS === */
+#fuel-btn {
+	background-color: #DBC36B;
+	border-bottom: 2px solid #36395C;
+	border-right: 2px solid #36395C;
+}
+
+#fuel-btn:hover {
+	background-color: #dbc36b9f;
+}
+
+#loss-screen > *, #win-screen > * {
+	margin: 15px 0;
+}
+
+#oxygen-btn {
+	background-color: #76DB93;
+	border-bottom: 2px solid #36395C;
+	border-right: 2px solid #36395C;
+}
+
+#oxygen-btn:hover {
+	background-color: #76db93af;
+}
+
+#rad-btn {
+	background-color: #DB9797;
+	border-bottom: 2px solid #36395C;
+	border-right: 2px solid #36395C;
+}
+
+#rad-btn:hover {
+	background-color: #db9797a5;
+}
+
+#reactor-up-btn, #reactor-down-btn {
+	background-color: #7DBEE8;
+	border-bottom: 2px solid #36395C;
+	border-right: 2px solid #36395C;
+}
+
+#reactor-up-btn:hover , #reactor-down-btn:hover {
+	background-color: #7dbde8c1;
+}
+
+#start-btn:hover {
+	background-color: #bd95e8c4;
+}
+
+#welcome-container, #loss-container, #win-container {
+	background-color: rgba(0,0,0,0.8);
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+#welcome-screen button, .restart-btn {
+	background-color: #BD95E8;
+	border-bottom: 2px solid #36395C;
+	border-right: 2px solid #36395C;
+	padding: 5px 8px;
+}
+
+#welcome-screen div {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+#welcome-screen h1 {
+	border-bottom: 5px solid #36395C;
+	margin: 5px;
+	text-align: center;
+}
+
+#welcome-screen h2 {
+	border: 5px solid #36395C;
+	margin: 0 40%;
+}
+
+#welcome-screen input {
+	border: none;
+	border-bottom: 2px solid #36395C;
+	border-radius: 5px;
+	border-right: 2px solid #36395C;
+	padding: 5px 8px;
+}
+
+#welcome-screen p {
+	line-height: 1.5;
+}
+
+#welcome-screen, #loss-screen, #win-screen {
+	font-size: 20px;
+	margin: 8% auto;
+	padding: 30px;
+	text-align: center;
+	width: 70%;
 }
