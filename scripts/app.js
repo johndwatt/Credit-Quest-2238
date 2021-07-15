@@ -71,6 +71,8 @@ const game = {
             $("#rad-container").removeClass("hidden");
             game.radGain();
         } else if (game.upgradeLevel === 3){
+            $("#reactor-container").removeClass("hidden");
+            game.shiftReactor();
             //console.log("level 3");
         }
     },
@@ -105,8 +107,9 @@ const game = {
         }, game.radGainInt);
     },
     shiftReactor (){
-        let randNum = Math.floor(Math.random() * 2 + 1);
+        //let randNum = Math.floor(Math.random() * 2 + 1);
         game.setReactorInterval = setInterval(function (){
+            let randNum = Math.floor(Math.random() * 2 + 1);
             if (game.reactor >= 100 | game.reactor <= 0){
                 game.loseCondition("reactor", game.credits);
             } else {
