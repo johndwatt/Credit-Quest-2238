@@ -3,12 +3,18 @@
     padding: 0;
     /* look up box command */
 }
+
 body {
     padding: 35px;
     border: 5px solid #36395C;
     min-height: 100vh;
     background-color: #52535C;
     color: #C8CBE1;
+    font-family: 'Noto Serif JP', 'Times New Roman', serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Encode Sans SC', Helvetica, sans-serif;
 }
 
 button {
@@ -89,6 +95,7 @@ aside {
     width: 18%;
     text-align: center;
     background-color: #6369A8;
+    font-family: 'Encode Sans SC', Helvetica, sans-serif;
 }
 
 aside .panel-section {

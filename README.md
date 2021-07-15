@@ -90,13 +90,20 @@ Animate your **spaceship** across the screen while it's alive.
 38. Add animations to the images of the spaceships - DONE
 39. Add any other misc styling to make the game come alive - DONE
 
+MVP - DONE!
+
+Things to do:
+1. Remove alert for win/loss condition and replace with modals
+2. restart game button
+3. change fonts to make it pretty + font sizes - DONE
+4. refactor code to be more programmatic/DRY
+
 A. Icebox/Stretch Goals
     1. Add a log with various points documenting when the buttons are clicked - example: "Added fuel to spaceshipName" when user clicks add fuel button
     2. Add new bars and buttons for additional stats the user should keep track of when the spaceship upgrades
     3. Alter how the stats change to a random interval or a random amount at each interval (or both!) to make the game more dynamic and challenging
     4. Add a method for random events that drastically change the ships stats with a log message to increase immersion. 
     5. Add a way to stop the start game button from being pushed more than once
-    6. refactor code to be more programmatic
 
 
 === WIREFRAME for MVP ===
