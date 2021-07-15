@@ -94,11 +94,11 @@ MVP - DONE!
 1. Remove alert for win/loss condition and replace with modals - DONE
 2. restart game button - DONE
 3. change fonts to make it pretty + font sizes - DONE
-4. refactor code to be more programmatic/DRY
+4. refactor code to be more programmatic/DRY - DONE
 5. go over spacing and margins again, smooth out details in css - DONE
 6. add additional images and css animations
 7. add game log with randomly selected phrases when buttons are pushed - SCRAPPED
-8. add CSS progress bars to control panel
+8. add CSS progress bars to control panel - DONE
 9. add select difficulty buttons that change interval speed /w multiplier
 10. Rewrite/reformat README file
 11. Change control panel stuff to only show up on upgrades - DONE
