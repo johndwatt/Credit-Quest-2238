@@ -40,6 +40,10 @@ button {
     font-size: 20px;
 }
 
+#loss-screen > *, #win-screen > * {
+    margin: 15px 0;
+}
+
 #welcome-screen h1 {
     text-align: center;
     margin: 5px;
@@ -94,8 +98,10 @@ header p {
 }
 
 header h2 {
-    border: 5px solid #36395C;
-    margin: 0 40%;
+    border-top: 5px solid #36395C;
+    border-bottom: 5px solid #36395C;
+    margin: 15px 30%;
+    padding: 5px;
     border-radius: 5px;
 }
 
@@ -109,8 +115,8 @@ section {
     border: 5px solid #36395C;
     border-radius: 5px;
     margin: 10px;
-    height: 400px;
-    width: 80%;
+    height: 500px;
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +134,7 @@ aside {
     border-radius: 5px;
     margin: 10px;
     padding: 20px;
-    width: 18%;
+    width: 25%;
     text-align: center;
     background-color: #6369A8;
     font-family: 'Encode Sans SC', Helvetica, sans-serif;

@@ -73,7 +73,6 @@ const game = {
         } else if (game.upgradeLevel === 3){
             $("#reactor-container").removeClass("hidden");
             game.shiftReactor();
-            //console.log("level 3");
         }
     },
     fuelLoss (){

@@ -92,7 +92,7 @@ Animate your **spaceship** across the screen while it's alive.
 
 MVP - DONE!
 
-Things to do:
+Stretch goals - things to do:
 1. Remove alert for win/loss condition and replace with modals - DONE
 2. restart game button - DONE
 3. change fonts to make it pretty + font sizes - DONE
@@ -102,7 +102,7 @@ Things to do:
 7. add game log with randomly selected phrases when buttons are pushed
 8. add CSS progress bars to control panel
 9. Rewrite/reformat README file
-10. Change control panel stuff to only show up on upgrades
+10. Change control panel stuff to only show up on upgrades - DONE
 11. DOUBLE CHECK ALL REQUIREMENTS!!! - DONE
 
 A. Icebox/Stretch Goals
