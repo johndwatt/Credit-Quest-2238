@@ -10,10 +10,10 @@ const game = {
     //INTERVAL SPEEDS
     countCreditsInt: 1000,
     upgradeInt: 1000,
-    fuelLossInt: 5000,
-    oxygenLossInt: 3000,
-    radGainInt: 1500,
-    shiftReactorInt: 1000,
+    fuelLossInt: 50000,
+    oxygenLossInt: 30000,
+    radGainInt: 15000,
+    shiftReactorInt: 10000,
     animateBounceInt: 2000,
     //CLEAR INTERVAL PLACEHOLDERS - DO NOT CHANGE!
     setCreditInterval: 0,

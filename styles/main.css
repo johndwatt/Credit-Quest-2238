@@ -62,7 +62,7 @@ button {
 }
 
 #welcome-screen button, .restart-btn {
-    background-color: #7DBEE8;
+    background-color: #BD95E8;
     padding: 5px 8px;
     border-bottom: 2px solid #36395C;
     border-right: 2px solid #36395C;
@@ -169,6 +169,16 @@ aside button {
     border-right: 2px solid #36395C;
 }
 
+#reactor-up-btn, #reactor-down-btn  {
+    background-color: #7DBEE8;
+    border-bottom: 2px solid #36395C;
+    border-right: 2px solid #36395C;
+}
+
+#reactor-up-btn:hover , #reactor-down-btn:hover  {
+    background-color: #7dbde8c1;
+}
+
 button:hover {
     color: #C8CBE1;
     cursor: pointer;
@@ -187,7 +197,7 @@ button:hover {
 }
 
 #start-btn:hover {
-    background-color: #7dbde8c1;
+    background-color: #bd95e8c4;
 }
 
 footer {
