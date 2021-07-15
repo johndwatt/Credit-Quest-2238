@@ -10,6 +10,7 @@ const game = {
     fuelLossInt: 5000,
     oxygenLossInt: 3000,
     radGainInt: 1500,
+    animateBounceInt: 2000,
     //CLEAR INTERVAL PLACEHOLDERS - DO NOT CHANGE!
     setCreditInterval: 0,
     setFuelInterval: 0,
@@ -101,34 +102,29 @@ const game = {
         }
         $("#rad-count").text(`Radiation: ${game.radiation}%`);
     },
-    loseCondition (statFail, score){
+    clearInts (){
         clearInterval(game.setCreditInterval);
         clearInterval(game.setFuelInterval);
         clearInterval(game.setOxygenInterval);
         clearInterval(game.setRadInterval);
         clearInterval(game.setBounceInterval);
-        $("#spaceship-1").addClass("hidden");
-        $("#spaceship-2").addClass("hidden");
-        $("#spaceship-3").addClass("hidden");
+    },
+    loseCondition (statFail, score){
+        game.clearInts();
+        $("#spaceship-1, #spaceship-2, #spaceship-3").addClass("hidden");
         $("#explosion").removeClass("hidden");
         $("#loss-container").removeClass("hidden");
         $("#update-loss").text(`Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);
     },
     winCondition(score){
-        clearInterval(game.setCreditInterval);
-        clearInterval(game.setFuelInterval);
-        clearInterval(game.setOxygenInterval);
-        clearInterval(game.setRadInterval);
-        clearInterval(game.setBounceInterval);
+        game.clearInts();
         $("#win-container").removeClass("hidden");
         $("#update-win").text(`You accumulated a total of ${score} credits and are able to retire!`);
     },
     makeShipBounce(){
         game.setBounceInterval = setInterval(function (){
-            $("#spaceship-1").toggleClass("animate__animated animate__headShake");
-            $("#spaceship-2").toggleClass("animate__animated animate__headShake");
-            $("#spaceship-3").toggleClass("animate__animated animate__headShake");
-        }, 3000);  
+            $("#spaceship-1, #spaceship-2, #spaceship-3").toggleClass("animate__animated animate__headShake");
+        }, game.animateBounceInt);  
     },
     
 }
