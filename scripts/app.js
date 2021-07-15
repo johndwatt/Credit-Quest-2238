@@ -2,27 +2,31 @@
 const game = {
     //METRICS
     credits: 0,
+    upgradeLevel: 1,
     fuel: 100,
     oxygen: 100,
     radiation: 0,
     //INTERVAL SPEEDS
     countCreditsInt: 1000,
+    upgradeInt: 1000,
     fuelLossInt: 5000,
     oxygenLossInt: 3000,
     radGainInt: 1500,
     animateBounceInt: 2000,
     //CLEAR INTERVAL PLACEHOLDERS - DO NOT CHANGE!
     setCreditInterval: 0,
+    setUpgradeInterval: 0,
     setFuelInterval: 0,
     setOxygenInterval: 0,
     setRadInterval: 0,
     setBounceInterval: 0,
     startGame (){
         game.grabShipName();
-        game.handleUpgradesAndCredits();
+        game.handleCredits();
+        game.handleUpgrades();
         game.fuelLoss();
         game.oxygenLoss();
-        game.radGain();
+        //game.radGain();
         game.makeShipBounce();
         $("#welcome-container").addClass("hidden");
     }, 
@@ -30,23 +34,42 @@ const game = {
         const shipName = $("#spaceship-name").val();
         $("#named-ship").text(shipName);
     },
-    handleUpgradesAndCredits (){
+    handleCredits (){
         game.setCreditInterval = setInterval(function (){
             if (game.credits < 10000) {
                 game.credits = game.credits += 100;
             } else if (game.credits >= 10000 && game.credits <= 99999){
                 game.credits = game.credits += 1000;
-                $("#spaceship-1").addClass("hidden");
-                $("#spaceship-2").removeClass("hidden");
             } else if (game.credits >= 100000 && game.credits <= 999999) {
                 game.credits = game.credits += 5000;
-                $("#spaceship-2").addClass("hidden");
-                $("#spaceship-3").removeClass("hidden");
             } else if (game.credits >= 1000000) {
                 game.winCondition(game.credits);
             }
             $("#credit-count").text(`CURRENT CREDITS: ${game.credits}`);
         }, game.countCreditsInt);
+    },
+    handleUpgrades (){
+        game.setUpgradeInterval = setInterval(function (){
+            if (game.credits === 10000) {
+                $("#spaceship-1").addClass("hidden");
+                $("#spaceship-2").removeClass("hidden");
+                game.upgradeLevel = 2;
+                game.increaseDifficulty();
+            } else if (game.credits === 100000){
+                $("#spaceship-2").addClass("hidden");
+                $("#spaceship-3").removeClass("hidden");
+                game.upgradeLevel = 3;
+                game.increaseDifficulty();
+            }
+        }, game.upgradeInt);
+    },
+    increaseDifficulty (){
+        if (game.upgradeLevel === 2){
+            $("#rad-container").removeClass("hidden");
+            game.radGain();
+        } else if (game.upgradeLevel === 3){
+            //console.log("level 3");
+        }
     },
     fuelLoss (){
         game.setFuelInterval = setInterval(function (){
