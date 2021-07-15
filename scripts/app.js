@@ -10,10 +10,10 @@ const game = {
     //INTERVAL SPEEDS
     countCreditsInt: 1000,
     upgradeInt: 1000,
-    fuelLossInt: 5000,
-    oxygenLossInt: 3000,
-    radGainInt: 2000,
-    shiftReactorInt: 10000,
+    fuelLossInt: 50000,
+    oxygenLossInt: 30000,
+    radGainInt: 20000,
+    shiftReactorInt: 1000,
     animateBounceInt: 2000,
     //CLEAR INTERVAL PLACEHOLDERS - DO NOT CHANGE!
     setCreditInterval: 0,
@@ -120,6 +120,7 @@ const game = {
                 }
             }
             $("#reactor-count").text(`Reactor: ${game.reactor} degrees`);
+            $("#reactor-meter").css(`width`, `${game.reactor}%`);
         }, game.shiftReactorInt);
     },
     addFuel (){
@@ -152,10 +153,12 @@ const game = {
     increaseReactorTemp (){
         game.reactor = game.reactor += 5;
         $("#reactor-count").text(`Reactor: ${game.reactor} degrees`);
+        $("#reactor-meter").css(`width`, `${game.reactor}%`);
     },
     decreaseReactorTemp (){
         game.reactor = game.reactor -= 5;
         $("#reactor-count").text(`Reactor: ${game.reactor} degrees`);
+        $("#reactor-meter").css(`width`, `${game.reactor}%`);
     },
     clearInts (){
         clearInterval(game.setCreditInterval);

@@ -156,6 +156,12 @@ section div {
     transition: width 1s 0s ease;
 }
 
+.meter #reactor-meter {
+    background-color: #7DBEE8;
+    width: 0%;
+    transition: width 1s 0s ease;
+}
+
 .meter span {
     display: block;
     height: 100%;
