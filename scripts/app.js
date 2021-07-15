@@ -1,17 +1,19 @@
-
-
+// === CREDIT QUEST: 2238 - GAME OBJECT ===
 const game = {
+    //METRICS
     credits: 0,
     fuel: 100,
     oxygen: 100,
     radiation: 0,
+    //INTERVAL SPEEDS
     countCreditsInt: 1000,
-    setCreditInterval: 0,
     fuelLossInt: 5000,
-    setFuelInterval: 0,
     oxygenLossInt: 3000,
-    setOxygenInterval: 0,
     radGainInt: 1500,
+    //CLEAR INTERVAL PLACEHOLDERS - DO NOT CHANGE!
+    setCreditInterval: 0,
+    setFuelInterval: 0,
+    setOxygenInterval: 0,
     setRadInterval: 0,
     setBounceInterval: 0,
     startGame (){
@@ -31,18 +33,18 @@ const game = {
         game.setCreditInterval = setInterval(function (){
             if (game.credits < 10000) {
                 game.credits = game.credits += 100;
+            } else if (game.credits >= 10000 && game.credits <= 99999){
+                game.credits = game.credits += 1000;
+                $("#spaceship-1").addClass("hidden");
+                $("#spaceship-2").removeClass("hidden");
             } else if (game.credits >= 100000 && game.credits <= 999999) {
                 game.credits = game.credits += 5000;
                 $("#spaceship-2").addClass("hidden");
                 $("#spaceship-3").removeClass("hidden");
             } else if (game.credits >= 1000000) {
                 game.winCondition(game.credits);
-            } else {
-                game.credits = game.credits += 1000;
-                $("#spaceship-1").addClass("hidden");
-                $("#spaceship-2").removeClass("hidden");
             }
-            $("#credit-count").text(`Current Credits: ${game.credits}`);
+            $("#credit-count").text(`CURRENT CREDITS: ${game.credits}`);
         }, game.countCreditsInt);
     },
     fuelLoss (){
@@ -131,7 +133,7 @@ const game = {
     
 }
 
-
+// === Event Listeners ===
 $("#start-btn").on("click", game.startGame);
 $("#fuel-btn").on("click", game.addFuel);
 $("#oxygen-btn").on("click", game.addOxygen);
@@ -163,3 +165,13 @@ $("#rad-btn").on("click", game.reduceRad);
         }, game.countCreditsInt);
     },
 */
+    /*metricLoss (stopIntVar, metric, metricStr, metricId, metricChange, interval){
+        stopIntVar = setInterval(function (){
+            if (metric <= 0){
+                game.loseCondition(`${metricStr}`, game.credits);
+            } else {
+                metric = metric -= metricChange;
+            }
+            $(`${metricId}`).text(`${metricStr}: ${metric}%`);
+        }, interval);
+    },*/

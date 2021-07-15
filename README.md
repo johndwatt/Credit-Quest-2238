@@ -103,7 +103,7 @@ Things to do:
 8. add CSS progress bars to control panel
 9. Rewrite/reformat README file
 10. Change control panel stuff to only show up on upgrades
-11. DOUBLE CHECK ALL REQUIREMENTS!!!
+11. DOUBLE CHECK ALL REQUIREMENTS!!! - DONE
 
 A. Icebox/Stretch Goals
     1. Add a log with various points documenting when the buttons are clicked - example: "Added fuel to spaceshipName" when user clicks add fuel button
