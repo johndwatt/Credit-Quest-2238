@@ -10,8 +10,8 @@ const game = {
     //INTERVAL SPEEDS
     countCreditsInt: 1000,
     upgradeInt: 1000,
-    fuelLossInt: 50000,
-    oxygenLossInt: 30000,
+    fuelLossInt: 5000,
+    oxygenLossInt: 3000,
     radGainInt: 15000,
     shiftReactorInt: 10000,
     animateBounceInt: 2000,
@@ -82,6 +82,7 @@ const game = {
                 game.fuel = game.fuel -= 20;
             }
             $("#fuel-count").text(`Fuel: ${game.fuel}%`);
+            $("#fuel-meter").css(`width`, `${game.fuel}%`);
         }, game.fuelLossInt);
     },
     oxygenLoss (){
@@ -92,6 +93,7 @@ const game = {
                 game.oxygen = game.oxygen -= 20;
             }
             $("#oxygen-count").text(`Oxygen: ${game.oxygen}%`);
+            $("#oxygen-meter").css(`width`, `${game.oxygen}%`);
         }, game.oxygenLossInt);
     },
     radGain (){

@@ -140,10 +140,14 @@ section div {
 
 .meter #fuel-meter {
     background-color: #DBC36B;
+    width: 100%;
+    transition: width 1s 0s ease;
 }
 
 .meter #oxygen-meter {
     background-color: #76DB93;
+    width: 100%;
+    transition: width 1s 0s ease;
 }
 
 .meter span {
