@@ -1,16 +1,8 @@
 # Project-0-GA
 A tomagotchi-type game for Project 0 at General Assembly
 
-=== Brainstorming ===
--A dragon hatching game where you raise a dragon overtime
--A knight that needs to survive in the cold
--An traveling adventurer that needs to snack - title is "the adventurers journey" or something
-    warmth, hunger, sleep
-    morphs at certain levels to become stronger? level up?
-***A space smuggler making deliveries or soemthing - he upgrades his spaceship after a certain number of levels. You ahve to keep the spaceship running and working until you make enough money to retire.***
 
-
-=== Overall Idea ===
+=== Overall Game Idea ===
 A spaceship that gains credits as it flies through the galaxy. To keep getting credits, you have to keep the spaceship working by pressing buttons on the control panel. Once the player reaches 1 million credits, they have enough to retire and win the game. However, if the spaceship is not maintained, it will blow up. 
 
 
@@ -30,26 +22,7 @@ A spaceship that gains credits as it flies through the galaxy. To keep getting c
 4. If the user maintains the ship until they reach 1 million credits, they retire and win the game. 
 
 
-=== Task Checklist for MVP ===
-Create a repo for your tomagotchi pet - DONE
-Make a commit after you finish each one of the following:
-Instatiate your Tomagotchi
-Display a character of your choice on the screen to represent **your spaceship**.
-Display the following metrics for **your spaceship**:
-- Hunger (1-10 scale) -> **Fuel**
-- Sleepiness (1-10 scale) -> **Oxygen**
-- Boredom (1-10 scale) -> **Radiation**
-- Age -> **Credits**
-Add buttons to the screen to **interact and maintain your spaceship**.
-Add the ability to name your **spaceship**.
-Style the page.
-Increase **credits overtime**.
-**Change** your **spaceship's fuel, oxygen and radiation** metrics on an interval of your choosing.
-Your **spaceship** should **explode** if **fuel, oxygen and radiation** hits **0 or** 10.
-**Upgrade your spaceship** at certain **credit levels**.
-Animate your **spaceship** across the screen while it's alive.
-
-
+///=== GAME CREATION PROCESS ===///
 === Breakdown of Milestones ===
 1. Finish overall planning on README file - DONE
 2. Finish fleshing out with: add explanation of what project is, why I made it, explanation of technologies used, etc. 
@@ -88,30 +61,46 @@ Animate your **spaceship** across the screen while it's alive.
 36. Add padding and margin to make everything look properly spaced - DONE
 37. Add a theme with color, fonts, and borders to stylize the page content and buttons - DONE
 38. Add animations to the images of the spaceships - DONE
-39. Add any other misc styling to make the game come alive - DONE
-
-MVP - DONE!
-
-Stretch goals - things to do:
-1. Remove alert for win/loss condition and replace with modals - DONE
-2. restart game button - DONE
-3. change fonts to make it pretty + font sizes - DONE
-4. refactor code to be more programmatic/DRY
-5. go over spacing and margins again, smooth out details in css
-6. add additional images and css animations
-7. add game log with randomly selected phrases when buttons are pushed
-8. add CSS progress bars to control panel
-9. Rewrite/reformat README file
-10. Change control panel stuff to only show up on upgrades - DONE
-11. DOUBLE CHECK ALL REQUIREMENTS!!! - DONE
-
-A. Icebox/Stretch Goals
-    1. Add a log with various points documenting when the buttons are clicked - example: "Added fuel to spaceshipName" when user clicks add fuel button
-    2. Add new bars and buttons for additional stats the user should keep track of when the spaceship upgrades
-    3. Alter how the stats change to a random interval or a random amount at each interval (or both!) to make the game more dynamic and challenging
-    4. Add a method for random events that drastically change the ships stats with a log message to increase immersion. 
-    5. Add a way to stop the start game button from being pushed more than once - DONE
+39. Add any other misc styling, animations, and features to make the game come alive - DONE
 
 
 === WIREFRAME for MVP ===
 ![mvp-wireframe](./images/Project-0-Wireframe.png)
+
+
+=== Task Checklist for MVP ===
+1. Create a repo for your tomagotchi pet - DONE
+2. Make a commit after you finish each one of the following:
+3. Instatiate your Tomagotchi - DONE
+4. Display a character of your choice on the screen to represent **your spaceship**. - DONE
+5. Display the following metrics for **your spaceship**: - DONE
+    - Hunger (1-10 scale) -> **Fuel** - DONE
+    - Sleepiness (1-10 scale) -> **Oxygen** - DONE
+    - Boredom (1-10 scale) -> **Radiation** - DONE
+    - Age -> **Credits** - DONE
+6. Add buttons to the screen to **interact and maintain your spaceship**. - DONE
+7. Add the ability to name your **spaceship**. - DONE
+8. Style the page. -DONE
+9. Increase **credits overtime**. - DONE
+10. **Change** your **spaceship's fuel, oxygen and radiation** metrics on an interval of your choosing. - DONE
+11. Your **spaceship** should **explode** if **fuel, oxygen and radiation** hits **0 or** 10. - DONE
+12. **Upgrade your spaceship** at certain **credit levels**. - DONE
+13. Animate your **spaceship** across the screen while it's alive. - DONE
+
+MVP - DONE!
+
+
+=== Stretch goals ===
+1. Remove alert for win/loss condition and replace with modals - DONE
+2. restart game button - DONE
+3. change fonts to make it pretty + font sizes - DONE
+4. refactor code to be more programmatic/DRY
+5. go over spacing and margins again, smooth out details in css - DONE
+6. add additional images and css animations
+7. add game log with randomly selected phrases when buttons are pushed - SCRAPPED
+8. add CSS progress bars to control panel
+9. add select difficulty buttons that change interval speed /w multiplier
+10. Rewrite/reformat README file
+11. Change control panel stuff to only show up on upgrades - DONE
+12. DOUBLE CHECK ALL REQUIREMENTS!!! - DONE
+

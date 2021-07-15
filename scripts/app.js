@@ -29,7 +29,6 @@ const game = {
         game.handleUpgrades();
         game.fuelLoss();
         game.oxygenLoss();
-        //game.radGain();
         game.makeShipBounce();
         $("#welcome-container").addClass("hidden");
     }, 
@@ -106,7 +105,6 @@ const game = {
         }, game.radGainInt);
     },
     shiftReactor (){
-        //let randNum = Math.floor(Math.random() * 2 + 1);
         game.setReactorInterval = setInterval(function (){
             let randNum = Math.floor(Math.random() * 2 + 1);
             if (game.reactor >= 100 | game.reactor <= 0){
@@ -158,6 +156,7 @@ const game = {
         clearInterval(game.setFuelInterval);
         clearInterval(game.setOxygenInterval);
         clearInterval(game.setRadInterval);
+        clearInterval(game.setReactorInterval);
         clearInterval(game.setBounceInterval);
     },
     loseCondition (statFail, score){
@@ -188,39 +187,3 @@ $("#rad-btn").on("click", game.reduceRad);
 $("#reactor-up-btn").on("click", game.increaseReactorTemp);
 $("#reactor-down-btn").on("click", game.decreaseReactorTemp);
 
-
-//WORK IN PROGRESS
-/*
-    handleUpgradesAndCredits (){
-        game.setCreditInterval = setInterval(function (){
-            if (game.credits < 10000) {
-                game.credits = game.credits += 100;
-                //FIXME: problem - interval is still going at original pace, will need to stop and restart interval for this to work properly 
-                //game.fuelLossInt = 5000;
-                //game.oxygenLossInt = 3000;
-                //game.radGainInt = 2000;
-            } else if (game.credits >= 100000) {
-                game.credits = game.credits += 5000;
-                //game.fuelLossInt = 1000;
-                //game.oxygenLossInt = 3000;
-                //game.radGainInt = 1000;
-            } else {
-                game.credits = game.credits += 1000;
-                //game.fuelLossInt = 300;
-                //game.oxygenLossInt = 3000;
-                //game.radGainInt = 1500;
-            }
-            $("#credit-count").text(`Current Credits: ${game.credits}`);
-        }, game.countCreditsInt);
-    },
-*/
-    /*metricLoss (stopIntVar, metric, metricStr, metricId, metricChange, interval){
-        stopIntVar = setInterval(function (){
-            if (metric <= 0){
-                game.loseCondition(`${metricStr}`, game.credits);
-            } else {
-                metric = metric -= metricChange;
-            }
-            $(`${metricId}`).text(`${metricStr}: ${metric}%`);
-        }, interval);
-    },*/

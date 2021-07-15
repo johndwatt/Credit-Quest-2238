@@ -116,7 +116,7 @@ section {
     border-radius: 5px;
     margin: 10px;
     height: 500px;
-    width: 45%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +134,7 @@ aside {
     border-radius: 5px;
     margin: 10px;
     padding: 20px;
-    width: 25%;
+    width: 30%;
     text-align: center;
     background-color: #6369A8;
     font-family: 'Encode Sans SC', Helvetica, sans-serif;
