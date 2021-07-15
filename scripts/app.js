@@ -11,7 +11,7 @@ const game = {
     setFuelInterval: 0,
     oxygenLossInt: 3000,
     setOxygenInterval: 0,
-    radGainInt: 2000,
+    radGainInt: 1500,
     setRadInterval: 0,
     setBounceInterval: 0,
     startGame (){
@@ -21,6 +21,7 @@ const game = {
         game.oxygenLoss();
         game.radGain();
         game.makeShipBounce();
+        $("#welcome-container").addClass("hidden");
     }, 
     grabShipName (){
         const shipName = $("#spaceship-name").val();
@@ -69,7 +70,7 @@ const game = {
             if (game.radiation >= 100){
                 game.loseCondition("radiation", game.credits);
             } else {
-                game.radiation = game.radiation += 20;
+                game.radiation = game.radiation += 10;
             }
             $("#rad-count").text(`Radiation: ${game.radiation}%`);
         }, game.radGainInt);
@@ -94,7 +95,7 @@ const game = {
         if (game.radiation <= 0){
             game.radiation = 0;
         } else {
-            game.radiation = game.radiation -= 50;
+            game.radiation = game.radiation -= 20;
         }
         $("#rad-count").text(`Radiation: ${game.radiation}%`);
     },
@@ -117,7 +118,6 @@ const game = {
         clearInterval(game.setRadInterval);
         clearInterval(game.setBounceInterval);
         alert(`CONGRATULATIONS: You accumulated a total of ${score} credits and are able to retire!`);
-
     },
     makeShipBounce(){
         game.setBounceInterval = setInterval(function (){

@@ -20,14 +20,21 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>CREDIT QUEST: 2138</h1>
-        <p>It is the year 2138. Humanity is testing new spaceships in its effort to become an intergalactic species. Fed up with the mundane day-to-day of Earth life, you spend your last credits on spaceship flight training and purchase your very own spaceship. You sign a contract to test the limits of spaceflight in certain uncharted areas of the galaxy in exchange for a steady flow of credits. Though the move is risky, and flying in uncharted areas can be dangerous, you know you can retire and live in comfort if you earn 1 million credits. With contract in hand, you ready yourself to take flight to the stars. There is just one last task before you speed off to earn your fortune...</p>            
-        <div id="onload-popup">
-            <p>Name your spaceship here:</p>
-            <input id="spaceship-name" type="text" placeholder="Galaxy Runner">
-            <button id="start-btn">Start your journey!</button>
+    <div id="welcome-container">
+        <div id="welcome-screen">
+            <h1>WELCOME TO CREDIT QUEST: 2238</h1>
+            <p>It is the year 2238. Humanity is testing new spaceships in its effort to become an intergalactic species. Fed up with the mundane day-to-day of Earth life, you spend your last credits on spaceship flight training and purchase your very own spaceship. You sign a contract to test the limits of spaceflight in certain uncharted areas of the galaxy in exchange for a steady flow of credits. Though the move is risky, and flying in uncharted areas can be dangerous, you know you can retire and live in comfort if you earn 1 million credits. With contract in hand, you ready yourself to take flight to the stars. There is just one last task before you speed off to earn your fortune...</p>            
+            <div>
+                <p>Name your spaceship:</p>
+                <input id="spaceship-name" type="text" placeholder="Spaceship">
+                <button id="start-btn">Start your journey!</button>
+            </div>
+            <p><em>Game created by</em> <strong>John D. Watt</strong> | <em><a href="https://github.com/johndwatt/Project-0-GA" target="_blank">Github</a>. <a href="https://www.linkedin.com/in/john-d-watt/" target="_blank">LinkedIn</a>.</em></p>
         </div>
+    </div>
+    <header>
+        <h1>CREDIT QUEST: 2238</h1>
+        <p id="append-here">Your journey has begun; and with it, a steady flow of credits to your bank account! Use the control panel on the right to keep your spaceship running. If you fail to maintain your ship, you may meet an untimely end...</p>     
         <h2 id="credit-count">Current Credits: 0</h2>
     </header>
     <main>
@@ -56,6 +63,26 @@
             </div>  
         </aside>
     </main>
+    <div class="hidden" id="loss-container">
+        <div id="loss-screen">
+            <h1>GAME OVER</h1>
+            <p>placeholder</p>            
+            <div>
+                <p>Try again:</p>
+                <button id="restart-btn">Restart</button>
+            </div>
+        </div>
+    </div>
+    <div class="hidden" id="win-container">
+        <div id="win-screen">
+            <h1>CONGRATULATIONS!</h1>
+            <p>palceholder</p>            
+            <div>
+                <p>Go again:</p>
+                <button id="restart-btn">Restart</button>
+            </div>
+        </div>
+    </div>
     <footer>
         <p><em>Game created by</em> <strong>John D. Watt</strong> | <em><a href="https://github.com/johndwatt/Project-0-GA" target="_blank">Github</a>. <a href="https://www.linkedin.com/in/john-d-watt/" target="_blank">LinkedIn</a>.</em></p>
         <div>
