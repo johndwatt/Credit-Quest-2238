@@ -150,6 +150,12 @@ section div {
     transition: width 1s 0s ease;
 }
 
+.meter #rad-meter {
+    background-color: #DB9797;
+    width: 0%;
+    transition: width 1s 0s ease;
+}
+
 .meter span {
     display: block;
     height: 100%;

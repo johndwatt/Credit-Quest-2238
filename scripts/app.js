@@ -12,7 +12,7 @@ const game = {
     upgradeInt: 1000,
     fuelLossInt: 5000,
     oxygenLossInt: 3000,
-    radGainInt: 15000,
+    radGainInt: 2000,
     shiftReactorInt: 10000,
     animateBounceInt: 2000,
     //CLEAR INTERVAL PLACEHOLDERS - DO NOT CHANGE!
@@ -104,6 +104,7 @@ const game = {
                 game.radiation = game.radiation += 10;
             }
             $("#rad-count").text(`Radiation: ${game.radiation}%`);
+            $("#rad-meter").css(`width`, `${game.radiation}%`);
         }, game.radGainInt);
     },
     shiftReactor (){
@@ -146,6 +147,7 @@ const game = {
             game.radiation = game.radiation -= 20;
         }
         $("#rad-count").text(`Radiation: ${game.radiation}%`);
+        $("#rad-meter").css(`width`, `${game.radiation}%`);
     },
     increaseReactorTemp (){
         game.reactor = game.reactor += 5;
