@@ -22,6 +22,7 @@ button {
     border: none;
     border-radius: 5px;
 }
+
 #welcome-container, #loss-container, #win-container {
     position: fixed;
     z-index: 1;
@@ -57,7 +58,7 @@ button {
     line-height: 1.5;
 }
 
-#welcome-screen button {
+#welcome-screen button, .restart-btn {
     background-color: #7DBEE8;
     padding: 5px 8px;
     border-bottom: 2px solid #36395C;
