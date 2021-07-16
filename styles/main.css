@@ -121,6 +121,7 @@ section {
 	justify-content: center;
 	margin: 10px;
 	width: 60%;
+    overflow: hidden;
 }
 
 section div {
@@ -192,6 +193,15 @@ section div {
 
 #oxygen-btn:hover {
 	background-color: #76db93af;
+}
+
+#planet {
+    height: 120px;
+    width: 120px;
+    padding: 35px 0;
+    align-self: flex-start;
+    justify-self: flex-end;
+    animation: move-planet 30s infinite;
 }
 
 #rad-btn {
@@ -271,4 +281,13 @@ section div {
 	padding: 30px;
 	text-align: center;
 	width: 70%;
+}
+
+@keyframes move-planet {
+    from {
+        transform: translatex(900%);
+    }
+    to {
+        transform: translatex(-350%);
+    }
 }
