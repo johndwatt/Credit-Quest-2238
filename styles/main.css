@@ -1,3 +1,6 @@
+/* Écrivain  https://opengameart.org/content/rocks 
+Yellow Tiberium https://opengameart.org/content/planet-0 */
+
 /* === ALL ELEMENTS === */
 * {
 	margin: 0;
@@ -171,6 +174,15 @@ section div {
 }
 
 /* === ID SELECTORS === */
+#asteroid {
+    height: 30px;
+    width: 45px;
+    padding-bottom: 55px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    animation: move-asteroid 35s infinite;
+}
+
 #fuel-btn {
 	background-color: #DBC36B;
 	border-bottom: 2px solid #36395C;
@@ -201,7 +213,7 @@ section div {
     padding: 35px 0;
     align-self: flex-start;
     justify-self: flex-end;
-    animation: move-planet 30s infinite;
+    animation: move-planet 40s infinite;
 }
 
 #rad-btn {
@@ -289,5 +301,14 @@ section div {
     }
     to {
         transform: translatex(-350%);
+    }
+}
+
+@keyframes move-asteroid {
+    from {
+        transform: translatex(250%);
+    }
+    to {
+        transform: translatex(-2400%);
     }
 }

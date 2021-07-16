@@ -32,6 +32,7 @@ const game = {
         game.makeShipBounce();
         $("#welcome-container").addClass("hidden");
         $("#planet").removeClass("hidden");
+        $("#asteroid").removeClass("hidden");
     }, 
     grabShipName (){
         const shipName = $("#spaceship-name").val();
@@ -173,7 +174,7 @@ const game = {
     },
     loseCondition (statFail, score){
         game.clearInts();
-        $("#spaceship-1, #spaceship-2, #spaceship-3, #planet").addClass("hidden");
+        $("#spaceship-1, #spaceship-2, #spaceship-3, #planet, #asteroid").addClass("hidden");
         $("#explosion").removeClass("hidden");
         $("#loss-container").removeClass("hidden");
         $("#update-loss").text(`Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);
