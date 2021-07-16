@@ -8,7 +8,7 @@ A spaceship that gains credits as it flies through the galaxy. To keep getting c
 
 === Link to the Game ===
 Play Credit Quest: 2238 in your browser HERE: 
--coming soon-
+https://johndwatt.github.io/Credit-Quest-2238/
 
 
 === Why a spaceship game? ===
