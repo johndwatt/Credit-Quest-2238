@@ -10,10 +10,10 @@ const game = {
     //INTERVAL SPEEDS
     countCreditsInt: 1000,
     upgradeInt: 1000,
-    fuelLossInt: 50000,
-    oxygenLossInt: 30000,
+    fuelLossInt: 5000,
+    oxygenLossInt: 3000,
     radGainInt: 2000,
-    shiftReactorInt: 10000,
+    shiftReactorInt: 1000,
     animateBounceInt: 2000,
     //CLEAR INTERVAL PLACEHOLDERS - DO NOT CHANGE!
     setCreditInterval: 0,
@@ -174,7 +174,7 @@ const game = {
     },
     loseCondition (statFail, score){
         game.clearInts();
-        $("#spaceship-1, #spaceship-2, #spaceship-3, #planet, #asteroid").addClass("hidden");
+        $("#spaceship-1, #spaceship-2, #spaceship-3, #planet, #asteroid, #exhaust").addClass("hidden");
         $("#explosion").removeClass("hidden");
         $("#loss-container").removeClass("hidden");
         $("#update-loss").text(`Uh oh! Looks like you failed to maintain your ${statFail}. You accumulated a total of ${score} credits.`);
@@ -187,6 +187,7 @@ const game = {
     makeShipBounce(){
         game.setBounceInterval = setInterval(function (){
             $("#spaceship-1, #spaceship-2, #spaceship-3").toggleClass("animate__animated animate__headShake");
+            $("#exhaust").toggleClass("animate__animated animate__flash");
         }, game.animateBounceInt);  
     },
     

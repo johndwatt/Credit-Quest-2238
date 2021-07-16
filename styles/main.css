@@ -129,6 +129,7 @@ section {
 
 section div {
 	margin: 0 auto;
+    display: flex;
 }
 
 /* === CLASS SELECTORS === */
@@ -183,6 +184,10 @@ section div {
     animation: move-asteroid 35s infinite;
 }
 
+#exhaust {
+    height: 50px;
+}
+
 #fuel-btn {
 	background-color: #DBC36B;
 	border-bottom: 2px solid #36395C;
@@ -195,6 +200,11 @@ section div {
 
 #loss-screen > *, #win-screen > * {
 	margin: 15px 0;
+}
+
+#named-ship {
+    margin: 10px 0;
+    font-size: 25px;
 }
 
 #oxygen-btn {
