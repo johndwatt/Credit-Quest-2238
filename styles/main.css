@@ -111,7 +111,7 @@ main {
 section {
 	align-items: center;
 	background-color: #000000;
-	background-image: url(/Project-0-GA/images/NebulousSpace_1280x720.png);
+	background-image: url(images/NebulousSpace_1280x720.png);
 	background-size: cover;
 	border: 5px solid #36395C;
 	border-radius: 5px;
