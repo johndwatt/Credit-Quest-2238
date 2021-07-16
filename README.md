@@ -96,7 +96,7 @@ MVP - DONE!
 3. change fonts to make it pretty + font sizes - DONE
 4. refactor code to be more programmatic/DRY - DONE
 5. go over spacing and margins again, smooth out details in css - DONE
-6. add additional images and css animations
+6. add additional images and css animations - DONE
 7. add game log with randomly selected phrases when buttons are pushed - SCRAPPED
 8. add CSS progress bars to control panel - DONE
 9. add select difficulty buttons that change interval speed /w multiplier

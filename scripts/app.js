@@ -62,6 +62,7 @@ const game = {
             } else if (game.credits === 100000){
                 $("#spaceship-2").addClass("hidden");
                 $("#spaceship-3").removeClass("hidden");
+                $("#exhaust").css(`height`, `68px`);
                 game.upgradeLevel = 3;
                 game.increaseDifficulty();
             }
@@ -190,7 +191,6 @@ const game = {
             $("#exhaust").toggleClass("animate__animated animate__flash");
         }, game.animateBounceInt);  
     },
-    
 }
 
 // === Event Listeners ===

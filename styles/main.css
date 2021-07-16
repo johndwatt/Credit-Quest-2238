@@ -1,6 +1,3 @@
-/* Écrivain  https://opengameart.org/content/rocks 
-Yellow Tiberium https://opengameart.org/content/planet-0 */
-
 /* === ALL ELEMENTS === */
 * {
 	margin: 0;
@@ -96,7 +93,6 @@ header h1 {
 header h2 {
 	border-bottom: 5px solid #36395C;
 	border-radius: 5px;
-	border-top: 5px solid #36395C;
 	margin: 15px 30%;
 	padding: 5px;
 }
@@ -120,7 +116,7 @@ section {
 	border: 5px solid #36395C;
 	border-radius: 5px;
 	display: flex;
-	height: 500px;
+	height: 550px;
 	justify-content: center;
 	margin: 10px;
 	width: 60%;
@@ -205,6 +201,9 @@ section div {
 #named-ship {
     margin: 10px 0;
     font-size: 25px;
+    font-family: 'Encode Sans SC', Helvetica, sans-serif;
+    text-transform: uppercase;
+    border-top: 5px solid #36395C;
 }
 
 #oxygen-btn {
